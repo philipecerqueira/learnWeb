@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Treinando Css</title>
+    <style>
+        body{
+            background-color: #f4f4f4;
+        }
+        #principal{
+            width: 900px;
+        }
+        .noticia{ 
+            background-color: #e5e5e5;
+            padding: 5px;
+            margin: 3px;
+            width: 280px;
+            float: left;
+            
+        }
+        .noticia a p{
+            text-align: center;
+        }
+        /* o clear limpa elementos flutuantes e faz com que a caixa pai  fique dentro da filha, sem ele o backgroud e width funcionem */
+        hr{
+            clear: both;
+        }
+        .imagem{
+            padding: 5px;
+            width: 265px;
+            margin: 12px;
+            float: left;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="principal">
+        <div id="noticias">
+            <div class="noticia">
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, aspernatur ullam possimus qui dicta nostrum ea rerum itaque. Reprehenderit incidunt quidem facilis aliquid nulla velit, soluta repellendus odit sequi consequuntur.</p>
+                <a href="#"> <p>Veja mais</p> </a>
+            </div>
+            <div class="noticia">
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, aspernatur ullam possimus qui dicta nostrum ea rerum itaque. Reprehenderit incidunt quidem facilis aliquid nulla velit, soluta repellendus odit sequi consequuntur.</p>
+                <a href="#"> <p>Veja mais</p> </a>
+            </div>
+            <div class="noticia">
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, aspernatur ullam possimus qui dicta nostrum ea rerum itaque. Reprehenderit incidunt quidem facilis aliquid nulla velit, soluta repellendus odit sequi consequuntur.</p>
+                <a href="#"> <p>Veja mais</p> </a>
+            </div>
+
+            <hr class="clear">
+        </div>
+
+        <div id=imagens> 
+            <div class="imagem">
+                <img src="imagens/imagem1.png">
+                <p>teste</p>
+            </div>
+        </div>
+        <div id=imagens> 
+            <div class="imagem">
+                <img src="imagens/imagem2.png">
+                <p>teste</p>
+            </div>
+        </div>
+        <div id=imagens> 
+            <div class="imagem">
+                <img src="imagens/imagem3.png">
+                <p>teste</p>
+            </div>
+        </div>
+        <div id=imagens> 
+            <div class="imagem">
+                <img src="imagens/imagem4.png">
+                <p>teste</p>
+            </div>
+        </div>
+        <div id=imagens> 
+            <div class="imagem">
+                <img src="imagens/imagem5.png">
+                <p>teste</p>
+            </div>
+        </div>
+        <hr class="clear">
+
+    </div>
+    
+</body>
+</html>
