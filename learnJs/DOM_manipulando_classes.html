@@ -2,24 +2,30 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript</title>
+    <style>
+        .estilo1{
+           background: #FF0000;
+           color: #FFF; 
+        }
+        .estilo2{
+            width: 400px;
+            height: 50px;
+            background: #33ff00;
+            color: #FFF; 
+        }
+    </style>
     <script>
-        function modificaEstilo(corDeFundo){
-            document.getElementById('quadrado').style.backgroundColor = corDeFundo;
+        function modificaClasse(){
+            document.getElementById('mensagem').className = 'estilo2';
         }
 
     </script>
 </head>
 <body>
-    <h3>Manipulando estilo</h3>
+    <h3>Manipulando classes</h3>
 
-    <button type="button" onclick="modificaEstilo('#FF0000')">Vermelho</button>
-    <button type="button" onclick="modificaEstilo('#00FF00')">Verde</button>
-    <button type="button" onclick="modificaEstilo('#0000FF')">Azul</button>
-    
+    <div id="mensagem" class="estilo1"> Modificando a classe do elemento</div>
     <hr>
-
-    <div style="border: 1px solid #000; width: 100px; height: 100px;" id="quadrado">
-
-    </div>
+    <button type="button" onclick="modificaClasse()"> aplicar classe</button>
 </body>
 </html>
