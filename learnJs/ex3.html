@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <input id="campo" type="text">
+    <button id="add" onclick="adiciona()">Adicionar</button>
+    <button id="order" onclick="orderna()">Ordernar</button>
+</body>
+
+    <script>
+        var objetos = ['Cadeira', 'Impressora', 'Garfo'];
+        
+
+        function adiciona(){
+
+            var valorCampo = document.getElementById('campo').value;
+
+            //Caso o campo esteja vazio manda um alerta
+            if(valorCampo == ""){
+                alert("Informe um valor válido");
+            }else{
+                // Verifica se o o valor ja foi inserido
+                if(objetos.indexOf(valorCampo) == -1){
+                    objetos.push(valorCampo);
+                    document.getElementById('campo').value = "";
+                }else{
+                    alert("Objeto já foi adicionado");
+                }
+            }
+            console.log(objetos);
+        }
+
+        function orderna(){
+            console.log(objetos.sort());
+        }
+    </script>
+</html>
