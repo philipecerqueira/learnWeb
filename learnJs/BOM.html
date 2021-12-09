@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+
+<script>
+    // Window
+    var janela
+    function abrir(){
+       janela = window.open('http://www.google.com', 'nova_janela', 'height=400, width=800')
+    }
+    function fechar(){
+        janela.close()
+    }
+
+    // Screen
+    var altura = window.screen.availHeight;
+    var largura = window.screen.availWidth;
+    document.write('Altura do navegador é: '+ altura+'<br>');
+    document.write('Largura do navegador é: '+ largura+'<br>');
+
+    // Timing
+
+    // setTimeout(function(){ 
+    //     document.write('Teste')
+    // },9000)
+    var i= 10
+    var x = setInterval(function(){
+        document.write(i + '<br>');
+        i--;
+        if (i === 0){
+            // window.location.reload();
+            clearInterval(x)
+        }
+    }, 1000);
+
+</script>
+
+<body>
+    <!-- Window -->
+    <button style="margin-top: 30px;" onclick="abrir()">Abrir Janela</button>  
+    <button onclick="fechar()">Fechar Janela</button>
+    <button onclick="window.print()">Imprimir</button> <br><br><br> 
+
+    <!-- Location -->
+    <button onclick='window.location.href="http://www.google.com"'>Acessar google</button> 
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    
+    
+    <script>
+        $('document').ready(() =>{
+            $('#start').click(() => {
+                $('.div').animate({
+                    'width': '180px',
+                    'height': '180px',
+                    'margin': '200px',
+                    'border-radius': '25px'
+                },{
+                    duration: 2000,
+                    complete: ()=> {$('#start').click(() => {
+                                        $('.div').html('<p style="text-align: center">foi</p>')
+                                    })
+                                }
+                })
+            })
+
+        })
+    </script>
+    <style>
+        .div{
+            width: 80px;
+            height: 80px;
+            border: 1px solid #000;
+            background-color: #aaa;
+        }
+    </style>
+</head>
+<body>  
+    
+    <button id="start" type="button">Start</button>
+    <div class="div"></div>
+
+
+   
+</body>
+</html>
