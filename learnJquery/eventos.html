@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<style>
+			#divInterna{
+				background-color: royalblue;
+				width: 80px;
+				height: 80px;
+			}
+			#divExterna{
+				background-color: salmon;
+				width: 80px;
+				height: 80px;
+				padding: 50px;
+			}
+		</style>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(() => {
+				$('#onload').html('Pagina carregada')
+
+				$(window).scroll(() => {
+					$('#scroll').html('scrool acionado')
+				})
+
+				$(window).resize(() =>{
+					$('#resize').html('Pagina redimensionada').css('background', '#ddd');
+				})
+
+				$('#div1').scroll(e => {
+					$(e.target).css('background', 'blue');
+				})
+				
+				$('#btn1').mousedown(() =>  {
+					$('#div2').css('background', 'blue');
+				})
+
+				// $('#btn1').mouseup(() =>  {
+				// 	$('#div2').css('background', 'green');
+				// })
+
+				$('#btn1').click(() =>  {
+					$('#div2').css('background', 'gray');
+				})
+
+				$('#btn2').dblclick(() =>  {
+					$('#div2').css('background', 'yellow');
+				})
+
+				$('#div2').mousemove(e => {
+					$('#resultado').html('X:' + e.offsetX + ' Y: '+ e.offsetY);
+				})
+
+				$('#divExterna').mouseenter(() => {
+					$('#resultado1').html('entrou')
+				})
+				$('#divExterna').mouseleave(() => {
+					$('#resultado1').html('saiu')
+				})
+
+				$('#divInterna').mouseenter(() => {
+					$('#resultado2').html('entrou')
+				})
+				$('#divInterna').mouseleave(() => {
+					$('#resultado2').html('saiu')
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		
+		<div id="topo">
+			<h1>Eventos</h1>
+		</div>
+
+		<div>
+			<h3>Browser</h3>
+			<span>Onload: </span><span id="onload">?</span><br />
+			<span>Scroll: </span><span id="scroll">?</span><br />
+			<span>Window: </span><span id="resize">?</span>
+			<hr />
+
+			<div id="div1" style="height: 100px; width: 100px; border: solid 1px #000; overflow-y: scroll;">
+				<br><br><br><br><br><br><br><br><br><br>
+			</div>	
+
+			<h3>Mouse</h3>
+			<button id="btn1" type="button">Clique aqui</button>
+			<button id="btn2" type="button">Clique aqui 2x</button>
+			<div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
+			<span>Resultado do evento sobre a div</span> <span id="resultado"></span>
+			<hr />
+
+			<div id="divExterna">
+				<div id="divInterna"></div>
+			</div>
+			<span>Resultado div externa: </span> <span id="resultado1"></span><br>
+			<span>Resultado div interna: </span> <span id="resultado2"></span> 
+
+
+
+			<h3>Teclado</h3>
+			<span>Nome:</span>
+			<input type="text" />
+			<span>Resultado do evento sobre o input</span>
+			<hr />
+
+			<h3>Formulário</h3>
+			<form>
+				<span>Nome:</span>
+				<input type="text" />
+
+				<span>E-mail:</span>
+				<input type="text" />
+
+				<span>Motivo do contato:</span>
+				<select>
+					<option value="">-- Selecione --</option>
+					<option value="duvida">Dúvida</option>
+					<option value="sugestao">Sugestão</option>
+				</select>
+				
+				<button type="button">Enviar</button>
+			</form>
+		</div>
+	</body>
+
+</html>

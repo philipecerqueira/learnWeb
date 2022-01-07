@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    
+
+
+    <script>
+        $('document').ready( () => {
+
+            $('#lista1').append('<li> no fim </li>');
+            $('#lista2').prepend('<div> no inicio </div>');
+            $('#lista2').before('<p> Fui inserido antes da div </p>');
+            $('#lista2').after('<p> Fui inserido depois da div </p>');
+
+            $('#lista3').html('<h4> substituir todo elemento da lista3</h4>');
+
+            $('#lista4').remove();
+
+
+        
+        })
+    </script>
+
+</head>
+<body>
+    <ul id="lista1">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <div id="lista2">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <div id="lista3">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <div id="lista4">
+       só teste
+    </div>
+    
+</body>
+</html>
